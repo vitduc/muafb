@@ -7,6 +7,8 @@ use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\NotificationController;
 use App\Http\Controllers\Backend\ContactController;
 use App\Http\Controllers\Frontend\HomeController;
+use App\Http\Controllers\Frontend\ProductController as ProductFE;
+use App\Http\Controllers\Frontend\BankTransferController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Backend\Dashboard;
@@ -30,6 +32,10 @@ Route::post('/register', [RegisterController::class, 'postRegister'])->name('pos
 
 
 Route::get('/', [HomeController::class, 'indexAction'])->name('home');
+Route::get('/products', [ProductFE::class, 'index'])->name('products');
+Route::get('/history', [HomeController::class, 'history'])->name('history');
+Route::get('/invoices', [HomeController::class, 'invoice'])->name('invoices');
+Route::get('/bank-transfer', [BankTransferController::class, 'indexAction'])->name('bank_transfer');
 
 
 // Route::prefix('admin')->group(function () {

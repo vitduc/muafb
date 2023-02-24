@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>MUAFB.NET</title>
+    <title>Ain - </title>
     <link rel="canonical" href="https://muafb.net/" />
     <meta name="description" content="MUAFB.NET" />
     <meta name="keywords" content="muafb net, muafbnet, via, clone, viafb, clonefb, via xmdt, xmdt, via 902, bm, bmfb">

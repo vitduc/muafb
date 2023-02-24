@@ -19,4 +19,12 @@ class HomeController extends Controller
         $notifications = Notification::where('status', '=', 1)->get();
         return view('frontend.modules.home', compact('categories', 'products', 'notifications'));
     }
+
+    public function history() {
+        return view('frontend.modules.history');
+    }
+
+    public function invoice() {
+        return view('frontend.modules.invoice');
+    }
 }

@@ -6,18 +6,6 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="alert bg-white alert-primary" role="alert">
-                        <div class="iq-alert-icon">
-                            <i class="ri-alert-line"></i>
-                        </div>
-                        <div class="iq-alert-text">
-@foreach ($notifications as $notification)
-    {!!$notification->content!!}
-@endforeach
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-12">
                     <div class="alert bg-white alert-danger" role="alert">
                         <div class="iq-alert-icon">
                             <i class="ri-alert-line"></i>
@@ -41,9 +29,6 @@
                                 @endforeach
                             </ul>
                         </div>
-
-
-                        {{-- forech danh sach san pham --}}
                         <div class="table-responsive">
                             <table class="table table-striped table-hover mb-0">
                                 <thead class="table-color-heading" style="background:#0C1965;color:white;">
@@ -112,9 +97,6 @@
                                 </tbody>
                             </table>
                         </div>
-
-                        {{-- end Prodcut --}}
-
                         <div class="d-flex justify-content-end align-items-center border-top-table p-3">
                             <a type="button" href="#" class="btn btn-secondary btn-sm"><i class="fas fa-cart-arrow-down mr-1"></i>Order History</a>
                         </div>
@@ -129,9 +111,9 @@
                         $("#amount").val('');
                         $("#modalBuy").modal();
                     }
-                    
+
                     document.getElementById('showDiscountCode').style.display = 'none';
-                    
+
                     function showDiscountCode() {
                         if (document.getElementById('showDiscountCode').style.display == 'none') {
                             document.getElementById('btnshowDiscountCode').className = "btn btn-sm btn-dark";
@@ -145,35 +127,34 @@
                             totalPayment();
                         }
                     }
-                    
+
                     function totalPayment() {
                         $('#total').html('<i class="fa fa-spinner fa-spin"></i> Đang xử lý...');
                         $.ajax({
-                            url: "https://muafb.net/ajaxs/client/totalPayment.php",
-                            method: "POST",
-                            data: {
-                                id: $("#modal-id").val(),
-                                amount: $("#amount").val(),
-                                coupon: $("#coupon").val(),
-                                token: $("#token").val(),
-                                store: 'accounts'
-                            },
-                            success: function(data) {
+                            url: "https://muafb.net/ajaxs/client/totalPayment.php"
+                            , method: "POST"
+                            , data: {
+                                id: $("#modal-id").val()
+                                , amount: $("#amount").val()
+                                , coupon: $("#coupon").val()
+                                , token: $("#token").val()
+                                , store: 'accounts'
+                            }
+                            , success: function(data) {
                                 $("#total").html(data);
-                            },
-                            error: function() {
+                            }
+                            , error: function() {
                                 cuteToast({
-                                    type: "error",
-                                    message: 'Không thể tính kết quả thanh toán',
-                                    timer: 5000
+                                    type: "error"
+                                    , message: 'Không thể tính kết quả thanh toán'
+                                    , timer: 5000
                                 });
                             }
                         });
                         //$("#total").html(total.toString().replace(/(.)(?=(\d{3})+$)/g, '$1,'));
                     }
-                    </script> 
 
-
+                </script>
                 <div class="modal fade" id="modalBuy" tabindex="-1" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered mw-650px">
                         <div class="modal-content" style="background-image:url('https://muafb.net/resources/images/bg-buy.png');">
@@ -204,99 +185,6 @@
                                 <div class="text-center mb-3">
                                     <button type="submit" id="btnBuy" onclick="buyProduct()" class="btn btn-primary btn-block"><i class="fas fa-credit-card mr-1"></i>Thanh toán</span></button>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-6">
-                    <div class="card card-block card-stretch card-height">
-                        <div class="card-header d-flex justify-content-between" style="background: #0C1965;">
-                            <div class="header-title">
-                                <h5 class="card-title" style="color:white;">ĐƠN HÀNG GẦN ĐÂY</h5>
-                            </div>
-                        </div>
-                        <div class="card-body p-0" style="height:500px;overflow-x:hidden;overflow-y:auto;">
-                            <div class="table-responsive">
-                                <table class="table table-striped mb-0">
-                                    <tbody>
-                                        <tr>
-
-                                            <td style="height:20px;">
-                                                <lord-icon src="https://cdn.lordicon.com/cllunfud.json" trigger="hover" style="width:30px;height:30px">
-                                                </lord-icon> <b style="color: green;">...881</b>
-                                                mua <b style="color: red;">1</b>
-                                                <b>P7 - Via Phi Cổ XMDT (Green tick) + Limit r...</b>
-                                                - <b style="color:blue;">58.000đ</b>
-                                            </td>
-                                            <td><span class="badge badge-primary">13 phút trước</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-
-                                            <td style="height:20px;">
-                                                <lord-icon src="https://cdn.lordicon.com/cllunfud.json" trigger="hover" style="width:30px;height:30px">
-                                                </lord-icon> <b style="color: green;">...123</b>
-                                                mua <b style="color: red;">1</b>
-                                                <b>P8 - Via Phi Cổ XMDT (Green tick) + Limit 5...</b>
-                                                - <b style="color:blue;">63.000đ</b>
-                                            </td>
-                                            <td><span class="badge badge-primary">29 phút trước</span>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="card card-block card-stretch card-height">
-                        <div class="card-header d-flex justify-content-between" style="background: #0C1965;">
-                            <div class="header-title">
-                                <h5 class="card-title" style="color:white;">NẠP TIỀN GẦN ĐÂY</h5>
-                            </div>
-                        </div>
-                        <div class="card-body p-0" style="height:500px;overflow-x:hidden;overflow-y:auto;">
-                            <div class="table-responsive">
-                                <table class="table table-striped mb-0">
-                                    <tbody>
-                                        <tr>
-                                            <td style="height:20px;">
-
-                                                <lord-icon src="https://cdn.lordicon.com/ujmqspux.json" trigger="hover" style="width:30px;height:30px">
-                                                </lord-icon> <b style="color: green;">... le</b>
-                                                thực hiện nạp <b style="color:blue;">31.000đ</b> -
-                                                <b style="color:red;">MOMO</b>
-                                            </td>
-                                            <td><span class="badge badge-primary">57 phút trước</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td style="height:20px;">
-
-                                                <lord-icon src="https://cdn.lordicon.com/ujmqspux.json" trigger="hover" style="width:30px;height:30px">
-                                                </lord-icon> <b style="color: green;">...881</b>
-                                                thực hiện nạp <b style="color:blue;">1.000.000đ</b> -
-                                                <b style="color:red;">ACB</b>
-                                            </td>
-                                            <td><span class="badge badge-primary">1 tiếng trước</span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td style="height:20px;">
-
-                                                <lord-icon src="https://cdn.lordicon.com/ujmqspux.json" trigger="hover" style="width:30px;height:30px">
-                                                </lord-icon> <b style="color: green;">...686</b>
-                                                thực hiện nạp <b style="color:blue;">50.000đ</b> -
-                                                <b style="color:red;">ACB</b>
-                                            </td>
-                                            <td><span class="badge badge-primary">7 tiếng trước</span>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
                             </div>
                         </div>
                     </div>

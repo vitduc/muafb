@@ -16,30 +16,30 @@
                     </span>
                 </li>
                 <li class=" sidebar-layout">
-                    <a href="#" class="svg-icon ">
+                    <a href="{{route('products')}}" class="svg-icon ">
                         <i class="fas fa-shopping-cart"></i>
-                        <span class="ml-2">Mua Tài Khoản</span>
+                        <span class="ml-2">Products</span>
                     </a>
                 </li>
                 <li class=" sidebar-layout">
-                    <a href="#" class="svg-icon ">
+                    <a href="{{route('history')}}" class="svg-icon ">
                         <i class="fas fa-history"></i>
-                        <span class="ml-2">Lịch Sử Mua Hàng</span>
+                        <span class="ml-2">Purchase History</span>
                     </a>
                 </li>
                 <li class="px-3 pt-3 pb-2 ">
                     <span class="text-uppercase small font-weight-bold">Nạp Tiền</span></span>
                 </li>
                 <li class=" sidebar-layout">
-                    <a href="#" class="svg-icon ">
+                    <a href="{{ route('bank_transfer')}}" class="svg-icon ">
                         <i class="fas fa-university"></i>
-                        <span class="ml-2">Ngân Hàng</span>
+                        <span class="ml-2">Bank Transfer</span>
                     </a>
                 </li>
                 <li class=" sidebar-layout">
-                    <a href="#" class="svg-icon ">
+                    <a href="{{route('invoices')}}" class="svg-icon ">
                         <i class="fas fa-file-invoice"></i>
-                        <span class="ml-2">Hoá Đơn</span>
+                        <span class="ml-2">Invoices</span>
                     </a>
                 </li>
                 <li class="px-3 pt-3 pb-2 ">
