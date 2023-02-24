@@ -1,0 +1,307 @@
+<!-- Dev By CMSNT.CO | FB.COM/CMSNT.CO | ZALO.ME/0947838128 | MMO Solution -->
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Đăng Nhập | MUAFB.NET</title>
+    <link rel="canonical" href="https://muafb.net/client/login" />
+    <meta name="description" content="MUAFB.NET" />
+    <meta name="keywords" content="muafb net, muafbnet, via, clone, viafb, clonefb, via xmdt, xmdt, via 902, bm, bmfb">
+    <meta name="copyright" content="CMSNT.CO - THIẾT KẾ WEBSITE MMO" />
+    <meta name="author" content="MUAFB.NET" />
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Đăng Nhập | MUAFB.NET">
+    <meta property="og:type" content="Website">
+    <meta property="og:url" content="https://muafb.net/">
+    <meta property="og:image:alt" content="MUAFB.NET">
+    <meta property="og:image" content="https://muafb.net/assets/storage/images/image_PW7.png">
+    <meta property="og:description" content="MUAFB.NET">
+    <meta property="og:site_name" content="Đăng Nhập | MUAFB.NET">
+    <meta property="article:section" content="MUAFB.NET">
+    <meta property="article:tag" content="muafb net, muafbnet, via, clone, viafb, clonefb, via xmdt, xmdt, via 902, bm, bmfb">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="https://muafb.net/assets/storage/images/favicon.png" />
+    <link rel="stylesheet" href="https://muafb.net/public/datum/assets/css/backend-plugin.min.css">
+    <!-- <link rel="stylesheet" href="https://muafb.net/public/datum/assets/css/backend.css?v=1.0.0"> -->
+
+    <link rel="stylesheet" href="https://muafb.net/resources/css/responsive.css">
+    <link rel="stylesheet" href="https://muafb.net/resources/css/backend.css?v=1.0.0">
+    <link rel="stylesheet" href="https://muafb.net/resources/css/customize.css">
+    <script src="https://muafb.net/resources/js/jquery.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- sweetalert2-->
+    <link class="main-stylesheet" href="https://muafb.net/public/sweetalert2/default.css" rel="stylesheet"
+        type="text/css">
+    <script src="https://muafb.net/public/sweetalert2/sweetalert2.js"></script>
+    <!-- Cute Alert -->
+    <link class="main-stylesheet" href="https://muafb.net/public/cute-alert/style.css" rel="stylesheet" type="text/css">
+    <script src="https://muafb.net/public/cute-alert/cute-alert.js"></script>
+    <!-- jQuery -->
+    <script src="https://muafb.net/public/js/jquery-3.6.0.js"></script>
+    <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+    <style>
+    body {
+        font-family: 'Roboto', sans-serif;    }
+
+    .card-product {
+        color: white;
+        background-image: linear-gradient(to right, #0C1965, #0C1965, #E11042);
+    }
+
+    #loading-center {
+        background: url(https://muafb.net/assets/storage/images/gif_loader4NQ.png) no-repeat scroll 50%;
+        background-size: 20%;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .change-mode .custom-switch.custom-switch-icon label.custom-control-label:after {
+        top: 0;
+        left: 0;
+        width: 35px;
+        height: 30px;
+        border-radius: 5px 0 0 5px;
+        background-color: #0C1965;
+        border-color: #0C1965;
+        z-index: 0;
+    }
+    </style>
+    
+
+    <!-- Script Header -->
+    <!-- Messenger Plugin chat Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Plugin chat code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "102266452782401");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v15.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script></head>
+<!-- Dev By CMSNT.CO | FB.COM/CMSNT.CO | ZALO.ME/0947838128 | MMO Solution --><style>
+    .bg-image {
+    background-position: 0 50%;
+    background-size: cover;
+}
+</style>
+<body class="bg-image" style="background-image: url(https://muafb.net/assets/storage/images/bg_loginUHC.png);">
+    <!-- loader Start -->
+    <div id="loading">
+        <div id="loading-center">
+        </div>
+    </div>
+    <!-- loader END -->
+    <div class="wrapper">
+        <section class="login-content">
+            <div class="container h-100">
+                <div class="row align-items-center justify-content-center h-100">
+                    <div class="col-md-5">
+                        <div class="card p-3">
+                            <div class="card-body">
+                                <div class="auth-logo">
+                                    <img src="https://muafb.net/assets/storage/images/logo_dark_6AD.png"
+                                        class="img-fluid  rounded-normal  darkmode-logo" alt="logo">
+                                    <img src="https://muafb.net/assets/storage/images/logo_light_TP8.png"
+                                        class="img-fluid rounded-normal light-logo" alt="logo">
+                                </div>
+                                <h3 class="mb-3 font-weight-bold text-center">Đăng Nhập</h3>
+                                <!-- <p class="text-center text-secondary mb-4">
+                                    Đăng nhập vào tài khoản của bạn để tiếp tục</p>
+                                <div class="social-btn d-flex justify-content-around align-items-center mb-4">
+                                    <button class="btn btn-outline-light">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="88.428 12.828 107.543 207.085">
+                                            <path
+                                                d="M158.232 219.912v-94.461h31.707l4.747-36.813h-36.454V65.134c0-10.658 2.96-17.922 18.245-17.922l19.494-.009V14.278c-3.373-.447-14.944-1.449-28.406-1.449-28.106 0-47.348 17.155-47.348 48.661v27.149H88.428v36.813h31.788v94.461l38.016-.001z"
+                                                fill="#3c5a9a" />
+                                        </svg>
+                                    </button>
+                                    <button class="btn btn-outline-light">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                            viewBox="0 0 256 262" preserveAspectRatio="xMidYMid">
+                                            <path
+                                                d="M255.878 133.451c0-10.734-.871-18.567-2.756-26.69H130.55v48.448h71.947c-1.45 12.04-9.283 30.172-26.69 42.356l-.244 1.622 38.755 30.023 2.685.268c24.659-22.774 38.875-56.282 38.875-96.027"
+                                                fill="#4285F4" />
+                                            <path
+                                                d="M130.55 261.1c35.248 0 64.839-11.605 86.453-31.622l-41.196-31.913c-11.024 7.688-25.82 13.055-45.257 13.055-34.523 0-63.824-22.773-74.269-54.25l-1.531.13-40.298 31.187-.527 1.465C35.393 231.798 79.49 261.1 130.55 261.1"
+                                                fill="#34A853" />
+                                            <path
+                                                d="M56.281 156.37c-2.756-8.123-4.351-16.827-4.351-25.82 0-8.994 1.595-17.697 4.206-25.82l-.073-1.73L15.26 71.312l-1.335.635C5.077 89.644 0 109.517 0 130.55s5.077 40.905 13.925 58.602l42.356-32.782"
+                                                fill="#FBBC05" />
+                                            <path
+                                                d="M130.55 50.479c24.514 0 41.05 10.589 50.479 19.438l36.844-35.974C195.245 12.91 165.798 0 130.55 0 79.49 0 35.393 29.301 13.925 71.947l42.211 32.783c10.59-31.477 39.891-54.251 74.414-54.251"
+                                                fill="#EB4335" />
+                                        </svg>
+                                    </button>
+                                    <button class="btn btn-outline-light">
+                                        <svg width="20" height="20" viewBox="328 355 335 276"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M 630, 425 A 195, 195 0 0 1 331, 600 A 142, 142 0 0 0 428, 570A  70,  70 0 0 1 370, 523A  70,  70 0 0 0 401, 521A  70,  70 0 0 1 344, 455A  70,  70 0 0 0 372, 460A  70,  70 0 0 1 354, 370A 195, 195 0 0 0 495, 442A  67,  67 0 0 1 611, 380A 117, 117 0 0 0 654, 363A  65,  65 0 0 1 623, 401A 117, 117 0 0 0 662, 390A  65,  65 0 0 1 630, 425Z"
+                                                style="fill:#3BA9EE;" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="mb-5">
+                                    <p class="line-around text-secondary mb-0"><span
+                                            class="line-around-1">hoặc</span></p>
+                                </div> -->
+                                <form>
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="form-group">
+                                                <label class="text-secondary">Tên đăng nhập</label>
+                                                <input class="form-control" type="text" id="username" value=""
+                                                    placeholder="Enter Username">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 mt-2">
+                                            <div class="form-group">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <label class="text-secondary">Mật khẩu</label>
+                                                    <!--<label><a href="auth-recover-pwd.html">Quên mật khẩu</a></label>-->
+                                                </div>
+                                                <input class="form-control" type="password" id="password" value=""
+                                                    placeholder="Vui lòng nhập mật khẩu">
+                                            </div>
+                                        </div>
+                                                                                <div class="col-lg-6 mt-2">
+                                            <div class="form-group">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <label class="text-secondary">Captcha</label>
+                                                </div>
+                                                <img width="100%" src="data:image/jpeg;base64,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" />
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 mt-2">
+                                            <div class="form-group">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <label
+                                                        class="text-secondary">Nhập nội dung bên trái</label>
+                                                </div>
+                                                <input class="form-control" type="text" id="phrase"
+                                                    placeholder="Vui lòng nhập mã captcha để xác minh">
+                                            </div>
+                                        </div>
+                                                                            </div>
+                                    <button type="button" id="btnLogin"
+                                        class="btn btn-primary btn-block mt-2">Đăng Nhập</button>
+                                    <div class="col-lg-12 mt-3">
+                                        <p class="mb-0 text-center">Bạn không có tài khoản? <a
+                                                href="https://muafb.net/client/register">Đăng Ký</a></p>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Backend Bundle JavaScript -->
+    <script src="https://muafb.net/public/datum/assets/js/backend-bundle.min.js"></script>
+    <!-- Chart Custom JavaScript -->
+    <script src="https://muafb.net/public/datum/assets/js/customizer.js"></script>
+    <script src="https://muafb.net/public/datum/assets/js/sidebar.js"></script>
+    <!-- Flextree Javascript-->
+    <script src="https://muafb.net/public/datum/assets/js/flex-tree.min.js"></script>
+    <script src="https://muafb.net/public/datum/assets/js/tree.js"></script>
+    <!-- Table Treeview JavaScript -->
+    <script src="https://muafb.net/public/datum/assets/js/table-treeview.js"></script>
+    <!-- SweetAlert JavaScript -->
+    <script src="https://muafb.net/public/datum/assets/js/sweetalert.js"></script>
+    <!-- Vectoe Map JavaScript -->
+    <script src="https://muafb.net/public/datum/assets/js/vector-map-custom.js"></script>
+    <!-- Chart Custom JavaScript -->
+    <script src="https://muafb.net/public/datum/assets/js/chart-custom.js"></script>
+    <script src="https://muafb.net/public/datum/assets/js/charts/01.js"></script>
+    <script src="https://muafb.net/public/datum/assets/js/charts/02.js"></script>
+    <!-- slider JavaScript -->
+    <script src="https://muafb.net/public/datum/assets/js/slider.js"></script>
+    <!-- Emoji picker -->
+    <script src="https://muafb.net/public/datum/assets/vendor/emoji-picker-element/index.js" type="module"></script>
+    <!-- app JavaScript -->
+    <script src="https://muafb.net/public/datum/assets/js/app.js"></script>
+</body>
+
+</html>
+
+
+<script type="text/javascript">
+$("#btnLogin").on("click", function() {
+    $('#btnLogin').html('<i class="fa fa-spinner fa-spin"></i> Đang xử lý...').prop('disabled',
+        true);
+    $.ajax({
+        url: "https://muafb.net/ajaxs/client/login.php",
+        method: "POST",
+        dataType: "JSON",
+        data: {
+            username: $("#username").val(),
+            password: $("#password").val(),
+            phrase: $("#phrase").val()
+        },
+        success: function(respone) {
+            if (respone.status == 'success') {
+                cuteToast({
+                    type: "success",
+                    message: respone.msg,
+                    timer: 5000
+                });
+                setTimeout("location.href = 'https://muafb.net/client/home';", 100);
+            } 
+            else if (respone.status == 'verify') {
+                cuteToast({
+                    type: "warning",
+                    message: respone.msg,
+                    timer: 5000
+                });
+                setTimeout("location.href = '" + respone.url +"';", 1000);
+            }
+            else {
+                Swal.fire(
+                    'Thất bại',
+                    respone.msg,
+                    'error'
+                );
+            }
+            $('#btnLogin').html('Đăng Nhập').prop('disabled', false);
+        },
+        error: function() {
+            cuteToast({
+                type: "error",
+                message: 'Không thể xử lý',
+                timer: 5000
+            });
+            $('#btnLogin').html('Đăng Nhập').prop('disabled', false);
+        }
+
+    });
+});
+</script>
